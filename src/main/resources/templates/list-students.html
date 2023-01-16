@@ -1,0 +1,45 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<title>List Students</title>
+		
+		<link rel="stylesheet" 
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+			crossorigin="anonymous" />
+	</head>
+	
+	<body>
+		
+		<div class="container">
+		
+			<h3 style="margin-top:25px;">Student Details</h3>
+			
+			<hr/>
+		
+			<table class="table table-bordered table-striped">
+			
+				<thead>
+					<tr>
+						<th>stdid</th>
+						<th>name</th>
+						<th>semester</th>
+						<th>gender</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="student: ${studentDetails}">
+						<td th:text="${student.stdid}" />
+						<td th:text="${student.name}" />
+						<td th:text="${student.semester}" />
+						<td th:text="${student.gender}" />
+					</tr>
+				</tbody>
+				
+			</table>
+		</div>
+		
+		
+	</body>
+
+</html>
